@@ -1,0 +1,113 @@
+.promo {
+  padding: 40px 0;
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .slider {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1120 / 702;
+    overflow: hidden;
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      z-index: 1;
+
+      &.active {
+        opacity: 1;
+        z-index: 2;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__dots {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 50;
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &.active {
+          background-color: #9e98dc;
+        }
+      }
+    }
+  }
+
+  &__banners {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+
+    .banner {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 25px;
+      text-decoration: none;
+      box-shadow: 10px 4px 14px rgba(0, 0, 0, 0.1);
+      pointer-events: auto;
+
+      span {
+        font-weight: bolder;
+        color: #000;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+      img {
+        width: 30px;
+      }
+
+      &--purple {
+        background-color: #9e98dc;
+        width: 149px;
+        height: 204px;
+        top: 75px;
+        right: -75px;
+        z-index: 12;
+      }
+
+      &--pink {
+        background-color: #ff87be;
+        width: 150px;
+        height: 273px;
+        top: 350px;
+        right: auto;
+        z-index: 11;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshop</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">Bookshop</div>
+
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="#">BOOKS</a></li>
+                    <li><a href="#">AUDIOBOOKS</a></li>
+                    <li><a href="#">STATIONERY & GIFTS</a></li>
+                    <li><a href="#">BLOG</a></li>
+                </ul>
+            </nav>
+
+            <div class="actions">
+                <button class="icon-btn"><img src="./images/user-icon.svg" alt="User"></button>
+                <button class="icon-btn"><img src="./images/search-icon.svg" alt="Search"></button>
+                <button class="icon-btn cart-btn">
+                    <img src="./images/cart-icon.svg" alt="Cart">
+                    <span class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="promo">
+            <div class="container">
+                <div class="promo__wrapper">
+                    <div class="slider-container">
+                        <div class="slider">
+                            <div class="slider__list">
+                                <div class="slide active"><img src="./images/banner.png" alt="1"></div>
+                                <div class="slide"><img src="./images/banner2.png" alt="2"></div>
+                                <div class="slide"><img src="./images/banner3.png" alt="3"></div>
+                            </div>
+                            <div class="slider__dots">
+                                <button class="dot active"></button>
+                                <button class="dot"></button>
+                                <button class="dot"></button>
+                            </div>
+                        </div>
+
+                        <div class="promo__banners">
+                            <a href="#" class="banner banner--purple">
+                                <span>Change old book on new</span>
+                                <img src="./images/arrow.svg" alt="arrow">
+                            </a>
+                            <a href="#" class="banner banner--pink">
+                                <span>Top 100 books 2022</span>
+                                <img src="./images/arrow.svg" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog">
+            <div class="container catalog__container">
+                <aside class="sidebar">
+                    <ul class="categories-list" id="categories-list">
+                        <li class="category-item active" data-category="Architecture">Architecture</li>
+                        <li class="category-item" data-category="Art & Fashion">Art & Fashion</li>
+                        <li class="category-item" data-category="Biography">Biography</li>
+                        <li class="category-item" data-category="Business">Business</li>
+                        <li class="category-item" data-category="Crafts & Hobbies">Crafts & Hobbies</li>
+                        <li class="category-item" data-category="Drama">Drama</li>
+                        <li class="category-item" data-category="Fiction">Fiction</li>
+                        <li class="category-item" data-category="Food & Drink">Food & Drink</li>
+                        <li class="category-item" data-category="Health & Wellbeing">Health & Wellbeing</li>
+                        <li class="category-item" data-category="History & Politics">History & Politics</li>
+                    </ul>
+                </aside>
+
+                <div class="books-content">
+                    <div class="books-grid" id="books-grid"></div>
+                    
+                    <button class="load-more" id="load-more-btn">Load more</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
